@@ -1,0 +1,70 @@
+.IndexPage {
+  background-blend-mode: darken;
+
+  .hero,
+  .productgrid {
+    @apply grid grid-cols-3 grid-rows-2 cursor-pointer;
+    min-height: calc(100vh - 5rem);
+
+    .product_card {
+      @apply relative overflow-hidden;
+
+      .name_box {
+        @apply absolute left-0 top-0 w-full flex  flex-col;
+        h1,
+        p {
+          @apply px-6 max-w-max;
+          transition: all 0.5s linear;
+        }
+      }
+
+      &:hover {
+        img {
+          transition: all 0.4s ease-in-out;
+          transform: scale(1.1);
+          overflow: hidden;
+        }
+
+        h1,
+        p {
+          @apply text-white bg-transparent;
+        }
+
+        .like {
+          @apply bg-transparent;
+          transition: all 0.4s ease-in-out;
+          color: "white";
+        }
+      }
+    }
+  }
+  .hero {
+    a:first-child {
+      @apply relative overflow-hidden col-span-2 row-span-2 bg-[#5a3aba];
+    }
+  }
+  .product_marquee,
+  .product_marquee2 {
+    @apply grid grid-cols-3 relative;
+    right: 0;
+    transform: translate3d(0, 0, 0);
+    animation: moveSlide 6s linear infinite;
+  }
+  .news {
+    @apply bg-black text-white;
+  }
+  .productgrid {
+    a:nth-child(2) {
+      @apply relative overflow-hidden col-span-2 row-span-2 bg-[#5a3aba];
+    }
+  }
+}
+
+@keyframes moveSlide {
+  100% {
+    transform: translateX(-100%);
+  }
+  0% {
+    transform: translateX(100%);
+  }
+}

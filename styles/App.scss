@@ -1,0 +1,19 @@
+.App {
+}
+
+.link {
+  @apply cursor-pointer hover:opacity-50;
+}
+
+.nav-search {
+  @apply bg-[#f1f3f5] h-10 max-w-lg flex px-2 rounded;
+  flex-grow: 2;
+}
+
+.Auth {
+  @apply fixed left-0 top-0 w-full h-full bg-gray-900 z-20 bg-opacity-10 flex items-center justify-center;
+}
+
+.input {
+  @apply border-gray-200 border-2 focus:outline-none focus:border-gray-400 p-2;
+}

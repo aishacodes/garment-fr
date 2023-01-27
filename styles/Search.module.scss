@@ -1,0 +1,31 @@
+.product_card {
+  @apply relative overflow-hidden h-[20.3rem] w-[16.5rem];
+
+  .name_box {
+    @apply absolute left-0 top-0 w-full flex  flex-col;
+    h1,
+    p {
+      @apply px-4 max-w-max;
+      transition: all 0.5s linear;
+    }
+  }
+
+  &:hover {
+    img {
+      transition: all 0.4s ease-in-out;
+      transform: scale(1.1);
+      overflow: hidden;
+    }
+
+    h1,
+    p {
+      @apply text-white bg-transparent;
+    }
+
+    .like {
+      @apply bg-transparent;
+      transition: all 0.4s ease-in-out;
+      color: "white";
+    }
+  }
+}
